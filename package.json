@@ -22,7 +22,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --passWithNoTests",
     "eject": "react-scripts eject",
-    "eslint": "eslint --ext .tsx --ext .ts src/"
+    "eslint": "eslint --ext .tsx --ext .ts src/",
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": [
