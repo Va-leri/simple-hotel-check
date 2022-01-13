@@ -2,8 +2,7 @@ import './placecard.scss';
 import './rating.scss';
 import { MAX_RATING, PlaceCardParent } from '../../const';
 import { Offer } from '../../types/offers';
-import { useDispatch, useSelector } from 'react-redux';
-import { getDaysNumber, getStartDate } from '../../store/selectors';
+import { useDispatch } from 'react-redux';
 import { MouseEvent } from 'react';
 import { updateFavorites } from '../../store/action';
 
