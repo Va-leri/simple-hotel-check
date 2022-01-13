@@ -1,0 +1,91 @@
+@import "../../scss/variables.scss";
+
+.favorites__title {
+  margin: 0;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+}
+
+.favorites__empty {
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 22px;
+}
+
+.favorites__menu {
+  margin-top: 33px;
+  display: flex;
+}
+
+.favorites__sort-label {
+  position: relative;
+  padding: 4px 30px 2px 7px;
+  border: 1px solid $unactive-option-color;
+  border-radius: 4px;
+  color: $unactive-option-color;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.408px;
+  cursor: pointer;
+
+  &:not(:last-child) {
+    margin-right: 7px;
+  }
+
+  &:checked {
+    color: $active-option-color;
+    border-color: $active-option-color;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    right: 14px;
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border: 1px solid $unactive-option-color;
+    border-left: none;
+    border-top: none;
+    transform: rotate(45deg);
+  }
+
+  &::before {
+    transform: rotate(-135deg);
+    top: 9px;
+  }
+
+  &::after {
+    bottom: 8px;
+  }
+
+  &--asc {
+    &::before {
+      border-color: inherit;
+    }
+  }
+
+  &--desc {
+    &::after {
+      border-color: inherit;
+    }
+  }
+}
+
+.favorites__sort-option {
+  &:checked {
+    & + .favorites__sort-label {
+      color: $active-option-color;
+      border-color: $active-option-color;
+    }
+  }
+}
+
+.favorites__results {
+  padding-left: 0;
+}

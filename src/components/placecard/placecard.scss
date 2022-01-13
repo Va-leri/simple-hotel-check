@@ -1,0 +1,157 @@
+@import "../../scss/variables.scss";
+
+.placecard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(135, 135, 135, 0.2);
+
+  &--results {
+    position: relative;
+    padding: 19px 16px 17px 88px;
+
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      width: 64px;
+      height: 64px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      background-color: rgba(65, 82, 46, 0.05);
+      background-image: url("../../backgrounds/house.svg");
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: auto;
+    }
+  }
+}
+
+.placecard__name {
+  width: 90%;
+  margin: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 22px;
+  letter-spacing: -0.408px;
+}
+
+.placecard__bookmark-btn {
+  width: 21px;
+  height: 18px;
+  padding: 0;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  fill: none;
+  stroke:  #e55858;
+
+  &--active {
+     fill: #e55858;
+  }
+}
+
+.placecard__dates {
+  margin-top: 3px;
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1;
+  letter-spacing: -0.408px;
+
+
+  &--favorites {
+    margin-top: 8px;
+    margin-bottom: 6px;
+  }
+}
+
+.placecard__date-from,
+.placecard__days {
+  margin: 0;
+  color: $secondary-text-color;
+}
+
+.placecard__date-from {
+  padding-right: 20px;
+}
+
+.placecard__days {
+  position: relative;
+  padding-left: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    width: 9px;
+    height: 1px;
+    left: 0;
+    top: 50%;
+    background: #c4c4c4;
+  }
+}
+
+.placecard__price {
+  min-width: 110px;
+  max-width: 160px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  line-height: 1;
+
+  &--favorites {
+    margin-top: 2px;
+  }
+}
+
+.placecard__price-text {
+  margin-right: 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  letter-spacing: -0.408px;
+  color: $secondary-text-color;
+}
+
+
+.placecard__price-value {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  text-align: right;
+  letter-spacing: -0.408px;
+}
+
+.placecard__rating {
+  margin-top: 7px
+}
+
+.placecard__stars {
+  width: 100px;
+  height: 17px;
+
+  &::before {
+    width: 100px;
+    background-size: 100px 17px;
+  }
+}
+
+
+.placecard__stars span{
+  width: 0%;
+
+  &::before{
+    width: 100px;
+    background-size: 100px 17px;
+  }
+}

@@ -1,0 +1,13 @@
+.login-main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #D69A0B;
+  background-image: linear-gradient(to right,rgba(255, 255, 255, 0.6) 0%,rgba(255, 255, 255, 0.6) 100%),
+    url('../../backgrounds/login-screen-bg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
