@@ -14,9 +14,11 @@ type PlacecardProps = {
 const getWordForDaysNumber = (number: number) => {
   const digit = number % 10;
   switch (digit) {
-    case (1):
+    case 1:
       return 'день';
-    case ( 2 || 3 || 4):
+    case 2:
+    case 3:
+    case 4:
       return 'дня';
     default:
       return 'дней';
