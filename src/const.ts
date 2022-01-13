@@ -32,7 +32,7 @@ export enum AuthorizationStatus {
 
 export const LOGIN_BASE_URL = 'https://8.react.pages.academy/six-cities';
 
-export const HOTELS_BASE_URL = 'http://engine.hotellook.com/api/v2';
+export const HOTELS_BASE_URL = 'https://engine.hotellook.com/api/v2';
 
 export enum LoginAPIRoute {
   Login = '/login',
