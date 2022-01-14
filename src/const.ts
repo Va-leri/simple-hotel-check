@@ -55,6 +55,9 @@ export const HotelsInitialParams: SearchParameters = {
   daysNumber: 1,
 };
 
-export enum ValidationMessage {
-  Password = 'Пароль не должен содержать кириллические символы',
+export enum ErrorMessage {
+  PasswordValidation = 'Пароль не должен содержать кириллические символы',
+  Axios = 'Что-то пошло не так. Попробуйте еще раз',
+  Auth = 'Ошибка авторизации. Проверьте правильность введенных email и пароля.',
+  HotelsServer = 'Ошибка загрузки данных',
 }

@@ -3,7 +3,7 @@ import './login-form.scss';
 import { FormEvent, useRef, KeyboardEvent } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAuthorizationStatus, getIsLoading } from '../../store/selectors';
-import { AppRoute, AuthorizationStatus, ValidationMessage } from '../../const';
+import { AppRoute, AuthorizationStatus, ErrorMessage } from '../../const';
 import Preloader from '../preloader/preloader';
 import { loginAction } from '../../store/api-actions';
 import { redirectToRout } from '../../store/action';
@@ -22,6 +22,10 @@ function LoginScreen(): JSX.Element {
   if (authorizationStatus === AuthorizationStatus.Unknown) {
     return <Preloader />;
   }
+
+  // if (true) {
+  //   return <Preloader />;
+  // }
 
   if (authorizationStatus === AuthorizationStatus.Auth) {
     dispatch(redirectToRout(AppRoute.Main));
@@ -45,7 +49,7 @@ function LoginScreen(): JSX.Element {
 
     if (value.search(/[а-яА-ЯёЁ]/g) >=0) {
       evt.preventDefault();
-      toast.warning(ValidationMessage.Password);
+      toast.warning(ErrorMessage.PasswordValidation);
     }
   };
 

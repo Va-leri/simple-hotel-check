@@ -208,11 +208,12 @@ html {
 }
 
 .loader-body {
-  min-height: 100vh;
-  background: #f5f9ff;
+  // min-height: 100vh;
+  // background: #f5f9ff;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: auto;
 }
 .loader-body .dribbble {
   position: fixed;
